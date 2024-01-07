@@ -1,6 +1,23 @@
+"use client";
 import React from "react";
 
 function Contact() {
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
+  const data = { name, email, message };
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("/api/email", {
+        method: "POST",
+        body: JSON.stringify({ email, name, message }),
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <section className="bg-blue-50 dark:bg-[#0F172B]" id="contact">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
@@ -36,9 +53,9 @@ function Contact() {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       className="h-6 w-6"
                     >
                       <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
@@ -66,9 +83,9 @@ function Contact() {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       className="h-6 w-6"
                     >
                       <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
@@ -100,9 +117,9 @@ function Contact() {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       className="h-6 w-6"
                     >
                       <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
@@ -125,7 +142,7 @@ function Contact() {
             </div>
             <div className="card h-fit max-w-6xl p-5 md:p-12" id="htmlForm">
               <h2 className="mb-4 text-2xl font-bold">Ready to Get Started?</h2>
-              <form id="contacthtmlForm">
+              <form onSubmit={handleSubmit} id="contacthtmlForm">
                 <div className="mb-6">
                   <div className="mx-0 mb-1 sm:mb-4">
                     <div className="mx-0 mb-1 sm:mb-4">
@@ -136,6 +153,8 @@ function Contact() {
                       <input
                         type="text"
                         id="name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         autoComplete="given-name"
                         placeholder="Your name"
                         className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
@@ -151,6 +170,8 @@ function Contact() {
                         type="email"
                         id="email"
                         autoComplete="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         placeholder="Your email address"
                         className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
                         name="email"
@@ -167,6 +188,8 @@ function Contact() {
                       name="textarea"
                       cols={30}
                       rows={5}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                       placeholder="Write your message..."
                       className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
                     ></textarea>

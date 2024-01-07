@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import { FaArrowTurnDown } from "react-icons/fa6";
 import Why from "./components/why";
 import Pricing from "./components/pricing";
@@ -32,8 +30,8 @@ export default function Home() {
                 </p>
               </span>
               <div className="flex gap-3 items-center space-x-3">
-                <button className="bg-orange-500 text-white px-8 py-4 font-bold  hover:bg-orange-600 transition duration-300">
-                  Get a free demo now{" "}
+                <button className="rounded-xl bg-orange-500 p-3.5 lg:p-4 px-10 lg:px-16 text-md lg:text-lg font-bold text-primary tracking-tight cta-btn cursor-pointer hover:scale-105 transition duration-300 ease-out">
+                  View Pricing
                 </button>
                 <div>
                   <FaArrowTurnDown className="h-40" />
