@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import React from "react";
 
 function Contact() {
@@ -6,7 +6,7 @@ function Contact() {
   const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
   const data = { name, email, message };
-  const handleSubmit = async (e: { preventDefault: () => void }) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     try {
       const response = await fetch("/api/email", {
@@ -39,9 +39,9 @@ function Contact() {
             <div className="h-full pr-6">
               <p className="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
                 Ready to take your business to new heights? Contact ApexMinds
-                Solutions today, and let's embark on this journey together.
-                We're not just a service provider; we're your partners in
-                success.
+                Solutions today, and let&apos;s embark on this journey together.
+                We&apos;re not just a service provider; we&apos;re your partners
+                in success.
               </p>
               <ul className="mb-6 md:mb-0">
                 <li className="flex">
