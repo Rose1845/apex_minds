@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 
 function Contact() {
@@ -6,13 +6,16 @@ function Contact() {
   const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
   const data = { name, email, message };
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     try {
       const response = await fetch("/api/email", {
         method: "POST",
         body: JSON.stringify({ email, name, message }),
       });
+      setEmail("");
+      setName("");
+      setMessage("");
     } catch (error) {
       console.log(error);
     }
