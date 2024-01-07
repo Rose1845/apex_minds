@@ -5,12 +5,10 @@ import { LiaCloudscale } from "react-icons/lia";
 import { FaChalkboardUser } from "react-icons/fa6";
 function Why() {
   return (
-    <div className="max-w-7xl mx-auto ">
+    <div className="max-w-7xl mx-auto " id="features">
       <div className="container">
         <div className="flex mt-8 flex-col -tracking-normal text-2xl font-bold text-center">
-          <span className="text-2xl font-medium ">
-            Why choose us?
-          </span>
+          <span className="text-2xl font-medium ">Why choose us?</span>
         </div>
         <div className="flex flex-col justify-center text-center items-center">
           <div className="flex flex-col mx-auto bg-white">

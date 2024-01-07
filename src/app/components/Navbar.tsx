@@ -11,7 +11,7 @@ export default function Navbar() {
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <a
               className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-              href="#pablo"
+              href="#"
             >
               ApexMinds
             </a>
@@ -35,9 +35,13 @@ export default function Navbar() {
               <a href="#home" className="text-white hover:text-gray-300">
                 Home
               </a>
+              <a href="#works" className="text-white hover:text-gray-300">
+                How it works
+              </a>
               <a href="#features" className="text-white hover:text-gray-300">
                 Features
               </a>
+
               <a href="#pricing" className="text-white hover:text-gray-300">
                 Pricing
               </a>
