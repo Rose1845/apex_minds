@@ -17,7 +17,7 @@ function Why() {
                 <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                   <div className="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main">
                     <span>
-                      <FaChalkboardUser className="text-[#581ff8] text-4xl" />
+                      <FaChalkboardUser className="text-[#f8591f] text-4xl" />
                     </span>
                     <p className="text-2xl font-extrabold text-dark-grey-900">
                       Innovation{" "}
@@ -35,7 +35,7 @@ function Why() {
                   </div>
                   <div className="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main">
                     <span>
-                      <LiaCloudscale className="text-[#581ff8] text-4xl" />
+                      <LiaCloudscale className="text-[#f8591f] text-4xl" />
                     </span>
                     <p className="text-2xl font-extrabold text-dark-grey-900">
                       Expertise{" "}
@@ -54,7 +54,7 @@ function Why() {
                   </div>
                   <div className="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main">
                     <span>
-                      <MdOutlineSecurity className="text-[#581ff8] text-4xl" />
+                      <MdOutlineSecurity className="text-[#f8591f] text-4xl" />
                     </span>
                     <p className="text-2xl font-extrabold text-dark-grey-900">
                       Client-Centric Approach{" "}

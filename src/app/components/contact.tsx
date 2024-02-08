@@ -144,7 +144,9 @@ function Contact() {
               </ul>
             </div>
             <div className="card h-fit max-w-6xl p-5 md:p-12" id="htmlForm">
-              <h2 className="mb-4 text-2xl font-bold">Ready to Get Started?</h2>
+              <h2 className="mb-4 text-2xl font-bold text-gray-600">
+                Ready to Get Started?
+              </h2>
               <form onSubmit={handleSubmit} id="contacthtmlForm">
                 <div className="mb-6">
                   <div className="mx-0 mb-1 sm:mb-4">

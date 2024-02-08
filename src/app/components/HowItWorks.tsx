@@ -8,10 +8,10 @@ const buge = Bungee_Spice({
 
 function HowItWorks() {
   return (
-    <section className="bg-[#0F172B] w-full" id="works">
+    <section className="w-full" id="works">
       <div className="max-w-7xl mx-auto ">
         <div className="container">
-          <div className="flex text-white mt-8 flex-col -tracking-normal text-2xl font-bold text-center">
+          <div className="flex text-neutral-900 mt-8 flex-col -tracking-normal text-2xl font-bold text-center">
             <span className="text-xl font-medium uppercase pt-2">
               How it works
             </span>
@@ -26,10 +26,10 @@ function HowItWorks() {
                       <span className={buge.className}>
                         <h1 className=" text-4xl">1</h1>
                       </span>
-                      <p className="text-2xl font-extrabold text-white">
+                      <p className="text-2xl font-extrabold text-neutral-900">
                         Application{" "}
                       </p>
-                      <p className="text-base leading-7 text-white">
+                      <p className="text-base leading-7 text-neutral-900">
                         Share your business goals and challenges with us. We
                         specialize in transforming your ideas into innovative
                         solutions for success.
@@ -39,10 +39,10 @@ function HowItWorks() {
                       <span className={buge.className}>
                         <h1 className="text-[#581ff8] text-4xl">2</h1>
                       </span>
-                      <p className="text-2xl font-extrabold text-white">
+                      <p className="text-2xl font-extrabold text-neutral-900">
                         Review{" "}
                       </p>
-                      <p className="text-base leading-7 text-white">
+                      <p className="text-base leading-7 text-neutral-900">
                         Our team of experts carefully evaluates your unique
                         requirements. We analyze market trends and industry best
                         practices to provide valuable insights and
@@ -53,10 +53,10 @@ function HowItWorks() {
                       <span className={buge.className}>
                         <h1 className="text-[#581ff8] text-4xl">3</h1>
                       </span>
-                      <p className="text-2xl font-extrabold text-white">
+                      <p className="text-2xl font-extrabold text-neutral-900">
                         Confirmation
                       </p>
-                      <p className="text-base leading-7 text-white">
+                      <p className="text-base leading-7 text-neutral-900">
                         Once we align on the best strategy for your business, we
                         ensure a secure and transparent confirmation process.
                         Your satisfaction is our priority, and we move forward
