@@ -7,6 +7,7 @@ export async function POST(request: NextRequest) {
 
   const transport = nodemailer.createTransport({
     service: "gmail",
+    host: "smtp.gmail.com",
     /* 
       setting service as 'gmail' is same as providing these setings:
       host: "smtp.gmail.com",

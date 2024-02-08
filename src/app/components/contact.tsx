@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import React from "react";
 
 function Contact() {
@@ -9,13 +10,17 @@ function Contact() {
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/email", {
-        method: "POST",
-        body: JSON.stringify({ email, name, message }),
-      });
-      setEmail("");
-      setName("");
-      setMessage("");
+      // const response = await fetch("/api/email", {
+      //   method: "POST",
+      //   body: JSON.stringify({ email, name, message }),
+      // });
+      const response2 = await axios.post("/api/email", data);
+      console.log(response2, "res");
+      if (response2.data) {
+        setEmail("");
+        setName("");
+        setMessage("");
+      }
     } catch (error) {
       console.log(error);
     }
